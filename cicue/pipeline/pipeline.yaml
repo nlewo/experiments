@@ -1,0 +1,16 @@
+ci:
+  repository:
+    branch: master
+genericTask:
+  name: my-task
+  steps:
+  - name: build
+    image: golang
+    script: go build
+  - name: test
+    image: golang
+    script: go test
+  trigger:
+    repository:
+      branch: master
+    event: push

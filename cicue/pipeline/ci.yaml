@@ -1,0 +1,6 @@
+ci:
+  namespace: default
+  repository:
+    revision: master
+    branch: master
+  event: push
