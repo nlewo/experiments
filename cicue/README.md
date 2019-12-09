@@ -3,14 +3,16 @@ allow a user to start by using YAML file to describe pipelines, and
 smoothly switch to Cue when more complex things have to be achieve.
 
 We use a small wrapper `./template.sh` on top of Cue which make
-conversion from and to YAML for us.
+conversion from and to YAML for us. Note features provided byt this
+wrapper are in the Cue CLI roadmap. In the future, it will no longer
+be required.
 
 ### Simple YAML pipeline
 
-We suppose to provide a `lib` to the user. This lib contains some
-resource specifications, helpers,... It currently only contains a
-helper to build Tekton resources easily. Thanks to this lib, a user can
-define a Tetkon task from a simple YAML:
+We suppose to provide a library to the user. This library contains
+some resources specifications, helpers,... It currently only contains
+a helper to easily build a Tekton taskrun. Thanks to this library, a
+user can define a Tetkon task from a simple YAML:
 
     genericTask:
       name: my-task
