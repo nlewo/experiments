@@ -1,0 +1,9 @@
+[package]
+name = "nixos-init"
+version = "0.1.0"
+authors = ["Antoine Eiche <lewo@abesis.fr>"]
+
+[dependencies]
+coreos-metadata = { path = "../coreos-metadata" }
+nix = "^0.13.0"
+clap = "2.32.0"
